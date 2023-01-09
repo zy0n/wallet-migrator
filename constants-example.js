@@ -55,9 +55,6 @@ const TOKENS_TO_KEEP = [
   "USDT",
   "WBNB",
   "WETH",
-  "AUTO",
-  "SHIB",
-  // 'CHI'
 ];
 
 const TOKEN_ABI = [
