@@ -3,7 +3,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]() [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
+[![GitHub Issues](https://img.shields.io/github/issues/zy0n/wallet-migrator)](https://github.com/zy0n/wallet-migrator/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/zy0n/wallet-migrator)](https://github.com/zy0n/wallet-migrator/pulls)
 </div>
 
 ---
