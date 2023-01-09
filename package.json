@@ -1,0 +1,23 @@
+{
+  "name": "wallet-migrator",
+  "version": "1.0.0",
+  "description": "EVM token migrator, generates new wallet. stores mnemonic, transfers all tokens from existing wallets to this new wallet.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "vanity": "node vanity.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "EVM",
+    "token",
+    "migrator"
+  ],
+  "author": "zy0n",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.2.2",
+    "bip39": "^3.0.4",
+    "ethers": "^5.7.2"
+  }
+}
