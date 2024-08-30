@@ -19,5 +19,8 @@
     "axios": "^1.2.2",
     "bip39": "^3.0.4",
     "ethers": "^5.7.2"
+  },
+  "devDependencies": {
+    "openpgp": "^5.11.2"
   }
 }
