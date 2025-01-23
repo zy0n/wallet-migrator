@@ -11,12 +11,19 @@ const mnemonicSize = {
   double: 256,
 };
 
+function generateFromMenmonic(mnemonic, index) {
+  const path = `m/44'/60'/0'/0/${index}`;
+  const secureWallet = ethers.Wallet.fromMnemonic(mnemonic, path);
+  return secureWallet;
+}
+
 function generateWallets() {
   const wallets = Array(100)
     .fill(0)
     .map(() => randGenerateWallet());
   return wallets;
 }
+
 function randGenerateWallet() {
   let mnemonic = bip39.generateMnemonic(mnemonicSize.double);
 
@@ -59,8 +66,8 @@ async function vanityScan(searchTerm, amount = 1) {
       );
       console.log("\n");
       console.log("Address: ", secureWallet.address);
-      console.log("PrivateKey: ", secureWallet.privateKey);
-      console.log(secureWallet.mnemonic);
+      // console.log("PrivateKey: ", secureWallet.privateKey);
+      // console.log(secureWallet.mnemonic);
       const walletInfo = getWalletInfo(secureWallet, difference);
       foundCount++;
       fs.mkdirSync(`./vanity/${searchTerm}`, { recursive: true });
@@ -108,4 +115,30 @@ main()
   .finally(() => {
     //cleanup code
     console.log("done vanity scan");
+    // const mnemonic = "";
+    // const mnemonicWallet = generateFromMenmonic(mnemonic, 0);
+    // const mnemonicWallet2 = generateFromMenmonic(mnemonic, 1);
+    // const mnemonicWallet3 = generateFromMenmonic(mnemonic, 2);
+
+    // console.log(mnemonicWallet.address);
+    // console.log(mnemonicWallet.privateKey);
+    // console.log(mnemonicWallet2.address);
+    // console.log(mnemonicWallet2.privateKey);
+    // console.log(mnemonicWallet3.address);
+    // console.log(mnemonicWallet3.privateKey);
   });
+
+// const main2 = async () => {
+//   const mnemonic = "";
+//   const mnemonicWallet = generateFromMenmonic(mnemonic, 0);
+//   const mnemonicWallet2 = generateFromMenmonic(mnemonic, 1);
+//   const mnemonicWallet3 = generateFromMenmonic(mnemonic, 2);
+
+//   console.log(mnemonicWallet.address);
+//   console.log(mnemonicWallet.privateKey);
+//   console.log(mnemonicWallet2.address);
+//   console.log(mnemonicWallet2.privateKey);
+//   console.log(mnemonicWallet3.address);
+//   console.log(mnemonicWallet3.privateKey);
+// };
+// main2();
